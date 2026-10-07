@@ -12,7 +12,9 @@ const progressRoutes = require("./routes/progressRoutes");
 
 dotenv.config();
 
-app.use(cors());
+app.use(cors({
+    origin: "https://personalized-health-wellness.vercel.app"
+}));
 app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/health", healthRoutes);   
