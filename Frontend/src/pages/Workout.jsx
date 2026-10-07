@@ -34,7 +34,7 @@ function Workout() {
 
             const response = await axios.post(
 
-                "http://localhost:8080/api/workout-tracking/",
+                "https://personalized-health-wellness-backend.onrender.com/api/workout-tracking/",
 
                 {
 
@@ -86,7 +86,7 @@ function Workout() {
 
                 const response = await axios.get(
 
-                    "http://localhost:8080/api/workouts/",
+                    "https://personalized-health-wellness-backend.onrender.com/api/workouts/",
 
                     {
 
@@ -136,7 +136,7 @@ function Workout() {
 
                 const response = await axios.get(
 
-                    "http://localhost:8080/api/workout-tracking/",
+                    "https://personalized-health-wellness-backend.onrender.com/api/workout-tracking/",
 
                     {
 
@@ -188,7 +188,7 @@ function Workout() {
 
                 const response = await axios.put(
 
-                    `http://localhost:8080/api/workouts/${editId}`,
+                    `https://personalized-health-wellness-backend.onrender.com/api/workouts/${editId}`,
 
                     {
 
@@ -248,7 +248,7 @@ function Workout() {
 
                 const response = await axios.post(
 
-                    "http://localhost:8080/api/workouts/",
+                    "https://personalized-health-wellness-backend.onrender.com/api/workouts/",
 
                     {
 
@@ -352,7 +352,7 @@ function Workout() {
 
             await axios.delete(
 
-                `http://localhost:8080/api/workouts/${id}`,
+                `https://personalized-health-wellness-backend.onrender.com/api/workouts/${id}`,
 
                 {
 

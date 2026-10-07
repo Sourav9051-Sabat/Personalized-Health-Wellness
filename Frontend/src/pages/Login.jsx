@@ -24,7 +24,7 @@ function Login() {
 
             const response = await axios.post(
 
-                "http://localhost:8080/api/auth/login",
+                "https://personalized-health-wellness-backend.onrender.com/api/auth/login",
 
                 {
 
@@ -135,11 +135,17 @@ function Login() {
                         <label>Email Address</label>
 
                         <input
+
                             type="email"
+
                             placeholder="Enter your email address"
+
                             value={email}
+
                             onChange={(e) => setEmail(e.target.value)}
+
                             required
+
                         />
 
                     </div>
@@ -149,19 +155,29 @@ function Login() {
                         <label>Password</label>
 
                         <input
+
                             type="password"
+
                             placeholder="Enter your password"
+
                             value={password}
+
                             onChange={(e) => setPassword(e.target.value)}
+
                             required
+
                         />
 
                     </div>
 
                     <button
+
                         type="submit"
+
                         className="auth-submit-button"
+
                         disabled={loading}
+
                     >
 
                         {loading ? "Signing In..." : "Sign In"}
@@ -197,3 +213,4 @@ function Login() {
 }
 
 export default Login;
+

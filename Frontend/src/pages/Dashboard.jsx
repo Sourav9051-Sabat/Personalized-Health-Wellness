@@ -22,7 +22,7 @@ function Dashboard() {
 
                 const planResponse = await axios.get(
 
-                    "http://localhost:8080/api/personalization/",
+                    "https://personalized-health-wellness-backend.onrender.com/api/personalization/",
 
                     {
 
@@ -40,7 +40,7 @@ function Dashboard() {
 
                 const progressResponse = await axios.get(
 
-                    "http://localhost:8080/api/progress/",
+                    "https://personalized-health-wellness-backend.onrender.com/api/progress/",
 
                     {
 
@@ -361,4 +361,6 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+
 

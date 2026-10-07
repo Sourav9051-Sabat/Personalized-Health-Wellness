@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 import axios from "axios";
@@ -27,7 +26,7 @@ function Register() {
 
             const response = await axios.post(
 
-                "http://localhost:8080/api/auth/register",
+                "https://personalized-health-wellness-backend.onrender.com/api/auth/register",
 
                 {
 
@@ -136,11 +135,17 @@ function Register() {
                         <label>Full Name</label>
 
                         <input
+
                             type="text"
+
                             placeholder="Enter your full name"
+
                             value={name}
+
                             onChange={(e) => setName(e.target.value)}
+
                             required
+
                         />
 
                     </div>
@@ -150,11 +155,17 @@ function Register() {
                         <label>Email Address</label>
 
                         <input
+
                             type="email"
+
                             placeholder="Enter your email address"
+
                             value={email}
+
                             onChange={(e) => setEmail(e.target.value)}
+
                             required
+
                         />
 
                     </div>
@@ -164,19 +175,29 @@ function Register() {
                         <label>Password</label>
 
                         <input
+
                             type="password"
+
                             placeholder="Create a password"
+
                             value={password}
+
                             onChange={(e) => setPassword(e.target.value)}
+
                             required
+
                         />
 
                     </div>
 
                     <button
+
                         type="submit"
+
                         className="auth-submit-button"
+
                         disabled={loading}
+
                     >
 
                         {loading ? "Creating Account..." : "Create Account"}

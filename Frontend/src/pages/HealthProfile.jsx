@@ -32,7 +32,7 @@ function HealthProfile() {
 
                 const response = await axios.get(
 
-                    "http://localhost:8080/api/auth/profile",
+                    "https://personalized-health-wellness-backend.onrender.com/api/auth/profile",
 
                     {
 
@@ -76,7 +76,7 @@ function HealthProfile() {
 
             const response = await axios.post(
 
-                "http://localhost:8080/api/health/",
+                "https://personalized-health-wellness-backend.onrender.com/api/health/",
 
                 {
 
@@ -325,11 +325,17 @@ function HealthProfile() {
                                     <label>Full Name</label>
 
                                     <input
+
                                         type="text"
+
                                         value={name}
+
                                         placeholder="Your full name"
+
                                         onChange={(e) => setName(e.target.value)}
+
                                         required
+
                                     />
 
                                 </div>
@@ -339,12 +345,19 @@ function HealthProfile() {
                                     <label>Age</label>
 
                                     <input
+
                                         type="number"
+
                                         min="1"
+
                                         placeholder="Enter your age"
+
                                         value={age}
+
                                         onChange={(e) => setAge(e.target.value)}
+
                                         required
+
                                     />
 
                                 </div>
@@ -354,9 +367,13 @@ function HealthProfile() {
                                     <label>Gender</label>
 
                                     <select
+
                                         value={gender}
+
                                         onChange={(e) => setGender(e.target.value)}
+
                                         required
+
                                     >
 
                                         <option value="">
@@ -406,12 +423,19 @@ function HealthProfile() {
                                     <div className="unit-input">
 
                                         <input
+
                                             type="number"
+
                                             min="1"
+
                                             placeholder="Enter height"
+
                                             value={height}
+
                                             onChange={(e) => setHeight(e.target.value)}
+
                                             required
+
                                         />
 
                                         <span>cm</span>
@@ -427,12 +451,19 @@ function HealthProfile() {
                                     <div className="unit-input">
 
                                         <input
+
                                             type="number"
+
                                             min="1"
+
                                             placeholder="Enter weight"
+
                                             value={weight}
+
                                             onChange={(e) => setWeight(e.target.value)}
+
                                             required
+
                                         />
 
                                         <span>kg</span>
@@ -458,9 +489,13 @@ function HealthProfile() {
                                     <label>Fitness Goal</label>
 
                                     <select
+
                                         value={fitnessGoal}
+
                                         onChange={(e) => setFitnessGoal(e.target.value)}
+
                                         required
+
                                     >
 
                                         <option value="">
@@ -496,9 +531,13 @@ function HealthProfile() {
                                     <label>Activity Level</label>
 
                                     <select
+
                                         value={activityLevel}
+
                                         onChange={(e) => setActivityLevel(e.target.value)}
+
                                         required
+
                                     >
 
                                         <option value="">
@@ -542,9 +581,13 @@ function HealthProfile() {
                             </p>
 
                             <button
+
                                 type="submit"
+
                                 className="save-profile-button"
+
                                 disabled={loading}
+
                             >
 
                                 {loading
@@ -574,3 +617,4 @@ function HealthProfile() {
 }
 
 export default HealthProfile;
+
