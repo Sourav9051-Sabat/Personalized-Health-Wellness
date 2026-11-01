@@ -40,12 +40,7 @@ app.get("/", (req, res) => {
 });
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URL, {
-    auth: {
-        username: process.env.MONGO_USERNAME,
-        password: process.env.MONGO_PASSWORD
-    }
-})
+mongoose.connect(process.env.MONGO_URL)
 .then(() => {
     console.log("MongoDB connected");
 })
