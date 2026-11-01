@@ -16,6 +16,7 @@ const workoutRoutes = require("./routes/workoutRoutes");
 const workoutTrackingRoutes = require("./routes/workoutTrackingRoutes");
 const progressRoutes = require("./routes/progressRoutes");
 
+// CORS configuration
 app.use(cors({
     origin: [
         "https://personalized-health-wellness.vercel.app",
@@ -25,6 +26,7 @@ app.use(cors({
 
 app.use(express.json());
 
+// API routes
 app.use("/api/auth", authRoutes);
 app.use("/api/health", healthRoutes);
 app.use("/api/personalization", personalizationRoutes);
@@ -32,10 +34,12 @@ app.use("/api/workouts", workoutRoutes);
 app.use("/api/workout-tracking", workoutTrackingRoutes);
 app.use("/api/progress", progressRoutes);
 
+// Root route
 app.get("/", (req, res) => {
     res.send("Health & Wellness API is running");
 });
 
+// MongoDB connection
 mongoose.connect(process.env.MONGO_URL, {
     auth: {
         username: process.env.MONGO_USERNAME,
@@ -50,6 +54,7 @@ mongoose.connect(process.env.MONGO_URL, {
     process.exit(1);
 });
 
+// Server
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
